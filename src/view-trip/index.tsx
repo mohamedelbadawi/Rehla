@@ -1,10 +1,10 @@
 import Hotels from "@/components/custom/Hotels";
 import InfoSection from "@/components/custom/InfoSection";
 import ItinerarySection from "@/components/custom/iternary";
-import { getAuthUserData, getDocument, isAuth } from "@/create-trip/helper";
+import {  getDocument} from "@/create-trip/helper";
 import { TripDocument } from "@/types/trip";
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 
 const ViewTrip = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -14,18 +14,12 @@ const ViewTrip = () => {
   const getTrip = async () => {
     return (await getDocument("trips", id as string)) as TripDocument;
   };
-  const router = useNavigate();
   useEffect(() => {
     const getTripData = async () => {
       setLoading(true);
       const tripData = await getTrip();
-      setTrip(tripData);
+      setTrip(tripData as TripDocument);
       setLoading(false);
-      const user = getAuthUserData();
-      if (trip?.user?.email != user?.email || !isAuth()) {
-        router("/");
-        console.log(trip, user?.email);
-      }
     };
     getTripData();
   }, [id]);
