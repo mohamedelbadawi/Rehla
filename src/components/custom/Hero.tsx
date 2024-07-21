@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 
-type Props = {};
-
-const Hero = (props: Props) => {
+const Hero = () => {
   return (
     <div className="flex items-center mx-9 mb-10 lg:mx-56 gap-9 flex-col">
       <img src="/header.avif" className="z-10 mt-5  rounded-xl h-1/2"  alt="" />

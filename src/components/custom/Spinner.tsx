@@ -1,6 +1,5 @@
-type Props = {};
 
-export const Spinner = (props: Props) => {
+export const Spinner = () => {
   return (
     <div className="w-full h-full z-0 bg-white shadow-md  p-3 rounded-lg">
       <div className="text-center">

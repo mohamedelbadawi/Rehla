@@ -18,11 +18,10 @@ import {
 } from "@/create-trip/helper";
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import { User } from "@/types/user";
-import { Link, Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-type Props = {};
 
-const Header = (props: Props) => {
+const Header = () => {
   const [user, setUser] = useState<User>({});
   const login = useGoogleLogin({
     onSuccess: (credentialResponse) => {

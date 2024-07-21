@@ -4,7 +4,7 @@ import "./index.css";
 
 import App from "./App.tsx";
 import Header from "./components/custom/header.tsx";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router} from "react-router-dom";
 
 import { Toaster } from "./components/ui/toaster.tsx";
 import { GoogleOAuthProvider } from "@react-oauth/google";

@@ -22,7 +22,7 @@ const UserTrips = () => {
     <div className=" my-10 ">
       <h1 className="text-2xl font-bold text-center mb-10">My Trips ✈️</h1>
       <div className=" lg:px-96 px-5 grid sm:grid-cols-1 lg:grid-cols-6 gap-5">
-        {trips?.map((trip, index) => (
+        {trips?.map((trip) => (
           <Link to={`/trip/${trip.id}`}>
             <Card className="cursor-pointer hover:shadow-md transition-all">
               <CardHeader>
